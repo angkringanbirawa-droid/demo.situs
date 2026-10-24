@@ -1,0 +1,17 @@
+/* Glitch Floating Animation for 404 Text */
+.glitch-404 {
+    position: relative;
+    animation: glitchFloat 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes glitchFloat {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-6px) rotate(0.4deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* Stage Hover Glow */
+#desertStage:hover #sceneSvg {
+    filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.3));
+    transition: filter 0.3s ease;
+}-

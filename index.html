@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id" class="dark font-sans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3M AUTOMOTIVE | Live Demo & Project Index</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#090A0F',
+                        cardbg: 'rgba(15, 20, 32, 0.65)',
+                        electriccyan: '#00f2fe',
+                        racingamber: '#ff7300',
+                        neonblue: '#38bdf8'
+                    },
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Smooth Scroll Engine -->
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+
+    <style>
+        body {
+            background-color: #090A0F;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Styles */
+        .glass-panel {
+            background: rgba(15, 22, 36, 0.7);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(0, 242, 254, 0.18);
+        }
+
+        .glow-cyan {
+            box-shadow: 0 0 35px rgba(0, 242, 254, 0.18);
+        }
+
+        /* Cyberpunk Grid Background */
+        .bg-grid-pattern {
+            background-image: 
+                linear-gradient(to right, rgba(0, 242, 254, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 242, 254, 0.04) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        /* Futuristic Cyber Framing */
+        .cyber-frame-cyan {
+            position: relative;
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            transition: all 0.3s ease;
+        }
+        .cyber-frame-cyan:hover {
+            border-color: #00f2fe;
+            box-shadow: 0 0 25px rgba(0, 242, 254, 0.25);
+        }
+        .cyber-frame-cyan::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px;
+            width: 10px; height: 10px;
+            border-top: 2px solid #00f2fe;
+            border-left: 2px solid #00f2fe;
+            z-index: 20;
+        }
+        .cyber-frame-cyan::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; right: -2px;
+            width: 10px; height: 10px;
+            border-bottom: 2px solid #00f2fe;
+            border-right: 2px solid #00f2fe;
+            z-index: 20;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #090A0F; }
+        ::-webkit-scrollbar-thumb { background: #00f2fe; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-darkbg text-slate-100 antialiased selection:bg-electriccyan selection:text-darkbg bg-grid-pattern min-h-screen flex flex-col justify-between">
+
+    <!-- Header Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-40 px-6 py-4 flex items-center justify-between border-b border-slate-800/80 bg-darkbg/80 backdrop-blur-xl">
+        <a href="#" class="flex items-center space-x-3 group">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-electriccyan to-blue-600 flex items-center justify-center glow-cyan group-hover:rotate-12 transition-transform">
+                <i class="fa-solid fa-desktop text-darkbg text-lg font-bold"></i>
+            </div>
+            <div>
+                <div class="text-base font-extrabold tracking-wider text-white">3M<span class="text-electriccyan">.Demo Index</span></div>
+                <div class="text-[9px] font-mono text-slate-400 tracking-widest uppercase">Live Demo Showcase Portal</div>
+            </div>
+        </a>
+
+        <div class="flex items-center space-x-3 font-mono text-xs">
+            <span class="px-3 py-1 rounded-full glass-panel border border-electriccyan/30 text-electriccyan flex items-center space-x-1.5">
+                <span class="w-2 h-2 rounded-full bg-electriccyan animate-pulse"></span>
+                <span>STATUS: READY</span>
+            </span>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="pt-28 pb-20 px-6 max-w-7xl mx-auto w-full">
+        
+        <!-- Header Title Banner -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full glass-panel border border-electriccyan/30 text-xs font-mono text-electriccyan mb-4">
+                <span class="w-2 h-2 rounded-full bg-electriccyan animate-pulse"></span>
+                <span>CENTRAL DEMO DIRECTORY</span>
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">
+                DAFTAR HALAMAN & <br>
+                <span class="bg-gradient-to-r from-electriccyan via-neonblue to-racingamber bg-clip-text text-transparent">
+                    LIVE DEMO SITUS 3M AUTOMOTIVE
+                </span>
+            </h1>
+            <p class="text-slate-400 text-sm font-sans leading-relaxed">
+                Ini adalah halaman khusu untuk situs DEMO, jadi lengkapi URL anda agar dapat melihat demo apa yang ingin anda lihat.
+            </p>
+        </div>
+
+                
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 px-6 border-t border-slate-800/80 bg-darkbg/80 text-center font-mono text-xs text-slate-500">
+        <div>© 2026 <span class="text-electriccyan font-bold">3M Automotive</span>. Demo Portal Directory.</div>
+    </footer>
+
+    <!-- JavaScript Lenis Smooth Scroll -->
+    <script>
+        const lenis = new Lenis({ duration: 1.2, smoothWheel: true });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+    </script>
+</body>
+</html>
